@@ -17,7 +17,7 @@ def get_shutdown_events(logfile):
     with open(logfile, 'r') as file:
         for line in file:
             # Check if the line indicates a shutdown event
-            if 'Shutdown' in line:
+            if 'Shutdown initiated' in line:
                 shutdown_events.append(line.strip())  # Add the log entry to the shutdown events list
 
     return shutdown_events
